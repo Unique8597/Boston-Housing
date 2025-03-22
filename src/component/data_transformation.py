@@ -2,7 +2,7 @@
 from data_ingestion import load_data
 from logger import logging
 
-train_data, train_target, test_data, test_target = load_data()
+train_data, train_targets, test_data, test_targets = load_data()
 
 def normalize(train_data, test_data):
 # Normalize Data using Feature-wise Technique
