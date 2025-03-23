@@ -1,4 +1,3 @@
- 
 from data_ingestion import load_data
 from logger import logging
 
