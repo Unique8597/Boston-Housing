@@ -21,9 +21,4 @@ jobs:
         pip install -r ./requirements_dev.txt
     - name: Analysing the code with pylint
       run: |
-        PYTHON_FILES = $(git ls-files '*.py')
-        if [ -z "$PYTHON_FILES" ]; then
-          echo "No python files to lint. Existing."
-          exit 0
-        fi
-          pylint $PYTHON_FILES
+        pylint $(git ls-files '*.py')
