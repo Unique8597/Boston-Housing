@@ -1,4 +1,5 @@
-FROM python:3.11-slim
+FROM tensorflow/tensorflow:latest  
+
 
 WORKDIR /app
 
@@ -13,4 +14,4 @@ COPY . .
 # Expose the port the app runs on
 EXPOSE 8000
 # Specify the command to run the application
-CMD ["uvicorn", "app:app", "--reload"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]

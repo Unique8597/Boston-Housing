@@ -13,6 +13,10 @@ with open("model.pkl", "rb") as model_file:
 class InputData(BaseModel):
     features: list[float]
 
+@app.get("/")
+async def root():
+    return {"message": "Welcome to the prediction API!"}
+
 @app.post("/predict/")
 async def predict(input_data: InputData):
     # Ensure input is a 2D array
