@@ -2,4 +2,6 @@ fastapi
 pydantic
 numpy
 uvicorn
+keras
 scikit-learn
+tensorflow
