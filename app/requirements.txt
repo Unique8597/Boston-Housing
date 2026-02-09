@@ -1,7 +1,5 @@
 fastapi
 pydantic
 numpy
-uvicorn
-keras
-scikit-learn
-tensorflow
+uvicorn[standard]
+gunicorn
