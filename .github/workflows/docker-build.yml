@@ -50,9 +50,6 @@ jobs:
       - name: Install requirements
         run: sudo apt-get update
 
-      - name: Install Python dependencies
-        run: make install
-
       - name: Login with service principal
         run: make login
       - name: Create new Revision
