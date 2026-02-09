@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:latest
+FROM python:3.12-slim-bookworm
 
 # Set work directory
 WORKDIR /app
