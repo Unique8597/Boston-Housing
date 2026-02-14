@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import numpy as np
 import pickle
+import os
+import load_dotenv
 
 app = FastAPI()
 
@@ -25,3 +27,10 @@ async def predict(input_data: InputData):
     # Run model prediction
     prediction = model.predict(input_array)
     return {"prediction": prediction.tolist()}
+
+@app.get("/message")
+async def message():
+    return {
+        "key": os.getenv("SECRETKEY"),
+        "name": os.getenv("NAME")
+    }
