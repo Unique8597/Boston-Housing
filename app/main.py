@@ -3,7 +3,6 @@ from pydantic import BaseModel
 import numpy as np
 import pickle
 import os
-import load_dotenv
 
 app = FastAPI()
 
